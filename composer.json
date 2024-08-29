@@ -26,7 +26,14 @@
   },
   "autoload": {
     "psr-4": {
-      "IMSSCI\\PDF\\": "src/Fpdf"
+      "Fpdf\\": "src/Fpdf"
+    }
+  },
+  "extra": {
+    "laravel": {
+        "aliases": {
+            "FPDF": "Fpdf\\Fpdf"
+        }
     }
   }
 }
