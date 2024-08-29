@@ -1,71 +1,47 @@
-FPDF Wrapper Class
+IMSS PDF
 ===================
 
-A composer wrapper around the great php FPDF class. All credit to them.
+Una extensión de la libreria FPDF con tipografia del IMSS, todos los creditos a los creadores de FPDF
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.86.
+Utiliza FPDF 1.86.
 
 
 
-## Installation
+## Instalación
 
-Add to your "__composer.json__" file under the "__require__" section:
-
+Agrega a tu archivo "__composer.json__" dentro de la sección "__require__" lo siguiente:
 ```
-"fpdf/fpdf": "^1.86"
+"imssci/pdf": "dev-main"
 ```
+Luego agrega, en ese mismo archivo, dentro de la sección "__repositories__" lo siguiente:
+```
+[
+    {
+        "type": "vcs",
+        "url": "https://github.com/imssci/pdf.git"
+    }
+]
+```
+Si la sección no existe, entonces creala.
 
-
-Update composer
-
+Ahora ejecuta:
 ```sh
-php composer.phar update
+composer update
 ```
+Y Listo
 
+## Uso
 
-
-## Usage
-
-In your php file that you want to use the class add a use statement.
+En el archivo php donde necesites crear la clase usa
 
 ```php
-use Fpdf\Fpdf;
+use imssci\pdf;
 ```
 
-Then use as per the FPDF documentation.
+Luego sigue la documentación oficial de FPDF
 
 ``` php
-$pdf = new Fpdf();
-```
-
-Alternatively you can extend as a typical php class.
-
-```php
-class CustomPdf extends Fpdf
-{
-    public function __construct(
-        $orientation = 'P',
-        $unit = 'mm',
-        $size = 'letter'
-    ) {
-        parent::__construct( $orientation, $unit, $size );
-        // ...
-    }
-}
-
-```
-
-
-
-### License FPDF
-
-```text
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software to use, copy, modify, distribute, sublicense, and/or sell
-copies of the software, and to permit persons to whom the software is furnished
-to do so.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+$pdf = new pdf();
 ```

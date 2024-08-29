@@ -1,14 +1,18 @@
 {
-  "name": "fpdf/fpdf",
-  "homepage": "https://github.com/coreydoughty/Fpdf",
-  "description": "FPDF Composer Wrapper",
-  "keywords": ["fpdf", "pdf", "wrapper"],
+  "name": "imssci/pdf",
+  "homepage": "https://github.com/imssci/pdf.git",
+  "description": "FPDF Extendido con tipografia IMSS",
+  "keywords": ["fpdf", "pdf", "wrapper", "imss"],
   "license": "MIT",
   "type": "library",
   "authors": [
     {
       "name": "Corey Doughty",
       "email": "corey@doughty.ca"
+    },
+    {
+      "name": "Luis Alfredo Monroy Villegas",
+      "email": "lur0y@hotmail.com"
     }
   ],
   "require": {
@@ -22,17 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fpdf\\": "src/Fpdf"
-    }
-  },
-  "archive": {
-    "exclude": ["original"]
-  },
-  "extra": {
-    "laravel": {
-        "aliases": {
-            "FPDF": "Fpdf\\Fpdf"
-        }
+      "IMSSCI\\PDF\\": "src/Fpdf"
     }
   }
 }
