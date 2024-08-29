@@ -23,8 +23,10 @@ Luego agrega, en ese mismo archivo, dentro de la sección "__repositories__" lo 
         "url": "https://github.com/imssci/pdf.git"
     }
 ]
+```
 
 Ahora ejecuta:
+
 ```sh
 composer update
 composer dump-autoload
@@ -36,5 +38,5 @@ Y Listo
 En el archivo php donde necesites crear la clase usa
 
 ``` php
-$pdf = new pdf();
+$pdf = new \Fpdf\Fpdf...
 ```
