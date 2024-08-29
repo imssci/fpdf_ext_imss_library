@@ -1,0 +1,13 @@
+{
+    "name": "imssci/fpdf_ext_imss_library",
+    "description": "A custom extended version of FPDF.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "IMSSCI\\FPDFExt\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2"
+    }
+}
