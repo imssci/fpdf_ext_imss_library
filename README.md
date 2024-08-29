@@ -24,7 +24,20 @@ Luego agrega, en ese mismo archivo, dentro de la sección "__repositories__" lo 
     }
 ]
 ```
-Si la sección no existe, entonces creala.
+Si la sección no existe, entonces creala. Por último agrega esto al autoload, deberia parecerse a esto
+```
+"autoload": {
+        "files": [
+            "app/Helpers/verPase.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/",
+            "IMSSCI\\Pdf\\": "src/"
+        }
+    }
+```
 
 Ahora ejecuta:
 ```sh
