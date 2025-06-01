@@ -75,7 +75,7 @@ protected $PDFVersion;         // PDF version number
 *                               Public methods                                 *
 *******************************************************************************/
 
-function __construct($orientation='P', $unit='mm', $size='A4', $data)
+function __construct($orientation='P', $unit='mm', $size='A4', $data=[])
 {
 	// Initialization of properties
 	$this->data = $data;
